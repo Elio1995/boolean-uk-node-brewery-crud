@@ -1,3 +1,8 @@
+
+
+const express = require ("express")
+const breweriesRouter = express.Router()
+
 let breweriesObj =
 [
   {
@@ -402,8 +407,7 @@ let breweriesObj =
   }
 ]
 
-const express = require ("express")
-const breweriesRouter = express.Router
+
 
 breweriesRouter.get("/", (req, res) => {
     const brewerieType= req.query.brewery_type

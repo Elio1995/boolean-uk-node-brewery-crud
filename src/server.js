@@ -13,8 +13,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 
-app.use("breweriesObj", breweriesRouter)
-app.use("toursRouter", toursRouter)
+app.use("/breweries", breweriesRouter)
+app.use("/tours", toursRouter)
 
 
 app.listen(port, () => {

@@ -1,4 +1,9 @@
-let tourObj = [
+
+  
+  const express = require("express");
+  const toursRouter = express.Router();
+
+  let tourObj = [
     {
       id: 1,
       breweryId: 9094,
@@ -13,11 +18,8 @@ let tourObj = [
     },
   ];
   
-  const express = require("express");
-  const toursRouter = express.Router();
-  
   toursRouter.get("/", (req, res) => {
-    res.json({ tourDB: tourObj });
+    res.json({ tourObj });
   });
   
   toursRouter.get("/:id", (req, res) => {
